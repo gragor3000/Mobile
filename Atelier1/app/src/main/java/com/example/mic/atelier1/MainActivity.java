@@ -2,7 +2,6 @@ package com.example.mic.atelier1;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -63,11 +62,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v)//fait afficher un message s'il ne mais pas de montant
     {
         //si il n'a pas entré de montant
-        if (txtMontant.getText().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Veuillez mettre un montant",
+        if (txtMontant.getText().toString().trim().length() == 0) {
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.Toast),
                     Toast.LENGTH_SHORT).show();
 
         } else {
+
             Montant = Integer.parseInt(txtMontant.getText().toString());
             Total = Montant;
 
@@ -80,17 +80,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             //calcul le montant par personne
             Total = Total/ Float.parseFloat(spPer.getSelectedItem().toString());
             Total = new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).floatValue();
-            Toast.makeText(getApplicationContext(), Float.toString(Total),
-                    Toast.LENGTH_SHORT).show();
 
             //envoi les valeurs à l'autre activité
-           /* Intent startbuttonintent = new Intent(this, SecondActivity.class);
+            Intent startbuttonintent = new Intent(this, SecondActivity.class);
             startbuttonintent.putExtra("Montant",Montant);
             startbuttonintent.putExtra("tgTaxe",tgTaxe.isChecked());
             startbuttonintent.putExtra("nbPickTip",nbPickTip.getValue());
             startbuttonintent.putExtra("spPer",spPer.getSelectedItem().toString());
             startbuttonintent.putExtra("Total",Total);
-            startActivity(startbuttonintent);*/
+            startActivity(startbuttonintent);
 
 
 

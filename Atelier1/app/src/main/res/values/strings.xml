@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Atelier1</string>
-
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="btnSubmit">Calculer</string>
+    <string name="txtMontant">Montant</string>
+    <string name="txtvPer">Nombre de personnes :</string>
+    <string name="txtTotal">Total</string>
+    <string name="Toast">Veuillez entrez un montant</string>
 </resources>

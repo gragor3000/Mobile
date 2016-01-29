@@ -3,21 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mic.atelier1.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="16dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:layout_height="match_parent">
 
         <EditText
             android:id="@+id/txtMontant"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="Montant"
+            android:hint="@string/txtMontant"
             android:inputType="numberDecimal" />
 
         <Button
@@ -28,7 +28,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:singleLine="false"
-            android:text="Calculer" />
+            android:text="@string/btnSubmit"
+            android:layout_marginBottom="400dp"/>
 
 
 
@@ -64,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/nbPickTip"
             android:layout_centerHorizontal="true"
-            android:text="Nombre de personnes :"
+            android:text="@string/txtvPer"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Spinner
@@ -73,8 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/textView"
             android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
+            android:layout_centerHorizontal="true"/>
+
+
     </RelativeLayout>
 
 </ScrollView>

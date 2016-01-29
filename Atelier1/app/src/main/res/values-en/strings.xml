@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Atelier1</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="btnSubmit">Calculate</string>
+    <string name="txtMontant">Amount</string>
+    <string name="txtvPer">Quantity of people:</string>
+    <string name="txtTotal">Total</string>
+    <string name="Toast">please enter an amount</string>
 </resources>
